@@ -237,7 +237,7 @@ a:hover { text-decoration: underline; }
 // ║  REPLACE THIS SECTION — Hotel and Days data                 ║
 // ╚══════════════════════════════════════════════════════════════╝
 
-const HOTEL = { name: 'D1-D2 镇远古城 · D3-D4 双河洞 · D5-D6 紫云县城', lat: 27.047373, lng: 108.421039 };
+const HOTEL = { name: 'D1-D2 镇远 · D3-D4 双河洞 · D5 紫云 · D6 贵阳', lat: 27.047373, lng: 108.421039 };
 
 const DAYS = [
   { id: 0, label: '总览', color: '#0071e3', locations: [] },
@@ -253,8 +253,7 @@ const DAYS = [
   ]},
   { id: 3, label: 'D3', date: '7/7 周二', title: '转场·遵义→双河洞', color: '#af52de', locations: [
     { name: '出发遵义（224km/2h38）', lat: 27.265856, lng: 108.302483, type: 'transport', time: '08:00', desc: '高过河→遵义直接开', detail: '' },
-    { name: '⚠️ 遵义会议会址', lat: 27.687888, lng: 106.919930, type: 'spot', time: '11:00', desc: '⚠️ POI 显示"暂停开放"', detail: '现场核实是否开放\\n不开放就直接去羊肉粉店\\n免费' },
-    { name: '遵义羊肉粉午餐', lat: 27.687888, lng: 106.919930, type: 'food', time: '12:00', desc: '遵义羊肉粉/辣鸡面/豆花面', detail: '推荐：正宗虾子羊肉粉', budget: '¥30/人' },
+    { name: '遵义羊肉粉午餐', lat: 27.687888, lng: 106.919930, type: 'food', time: '11:00', desc: '遵义羊肉粉/辣鸡面/豆花面', detail: '推荐：正宗虾子羊肉粉\\n吃完继续赶路', budget: '¥30/人' },
     { name: '出发双河洞（94km/1h25）', lat: 27.687888, lng: 106.919930, type: 'transport', time: '13:30', desc: '', detail: '' },
     { name: '十二背后·地下裂缝景区', lat: 28.233674, lng: 107.304816, type: 'spot', time: '15:00', desc: '⭐ 亚洲第一长洞 409km（世界第三）', detail: '15:30-18:00 观光段徒步 2.5h\\n走溶洞地面，无难度\\n看喀斯特奇观' },
     { name: '双河洞景区民宿（D3-D4 连住 2 晚）', lat: 28.233674, lng: 107.304816, type: 'hotel', time: '18:00', desc: '¥200-350/间 × 2', detail: '晚饭：景区内餐厅\\n星空/洞穴讲解', pay: { alipay: 1, wechat: 1 } }
@@ -272,14 +271,14 @@ const DAYS = [
     { name: '出发紫云（158km/2h40）', lat: 26.180711, lng: 105.934822, type: 'transport', time: '19:30', desc: '晚出发', detail: '' },
     { name: '紫云县城酒店（D5-D6 连住 2 晚）', lat: 25.762787, lng: 106.088852, type: 'hotel', time: '22:10', desc: '¥180-250/间 × 2', pay: { alipay: 1, wechat: 1 } }
   ]},
-  { id: 6, label: 'D6', date: '7/10 周五', title: '紫云县·格凸河🕳️', color: '#5ac8fa', locations: [
+  { id: 6, label: 'D6', date: '7/10 周五', title: '格凸河→返贵阳🕳️', color: '#5ac8fa', locations: [
     { name: '出发格凸河（74km/1h44）', lat: 25.762787, lng: 106.088852, type: 'transport', time: '08:30', desc: '早出发', detail: '' },
-    { name: '格凸河风景区', lat: 25.678486, lng: 106.267069, type: 'spot', time: '09:30', desc: '⭐ 116m 高穹顶溶洞（世界最大之一）', detail: '09:30-12:00 徒步+燕子洞\\n13:30-15:30 皮划艇进溶洞（暗河+钟乳石+头灯）\\n⚠️ 不看蜘蛛人表演', budget: '¥100（学生半价 50）' },
-    { name: '⚠️ 麝香洞（可能是织金奢香洞）', lat: 26.585618, lng: 105.894528, type: 'spot', time: '16:10', desc: '⚠️ POI 定位在织金县，距紫云 200km', detail: '⚠️ 需澄清是否加入\\n如实际是织金奢香洞需绕大圈\\n建议只玩格凸河早点回紫云' },
-    { name: '紫云县城连住第 2 晚', lat: 25.762787, lng: 106.088852, type: 'hotel', time: '18:30', desc: '早睡（D7 早出发）' }
+    { name: '格凸河风景区', lat: 25.678486, lng: 106.267069, type: 'spot', time: '09:30', desc: '⭐ 116m 高穹顶溶洞（世界最大之一）', detail: '09:30-12:00 徒步+燕子洞\\n13:30-15:30 皮划艇进溶洞（暗河+钟乳石+头灯）\\n不看蜘蛛人表演', budget: '¥100（学生半价 50）' },
+    { name: '出发贵阳（177km/2h25）', lat: 25.678486, lng: 106.267069, type: 'transport', time: '16:00', desc: '皮划艇结束后直接返贵阳', detail: '砍紫云 D6 一晚，省 4 人酒店钱' },
+    { name: '贵阳 D6 住宿（近北站方便次日走）', lat: 26.619478, lng: 106.674554, type: 'hotel', time: '18:30', desc: '¥200-300/间 × 2', detail: '晚上尝贵阳夜宵：糯米饭/豆腐圆子/丝娃娃', pay: { alipay: 1, wechat: 1 } }
   ]},
   { id: 7, label: 'D7', date: '7/11 周六', title: '返程·4 人分手🎬', color: '#ffcc00', locations: [
-    { name: '出发贵阳（159km/2h）', lat: 25.762787, lng: 106.088852, type: 'transport', time: '09:00', desc: '紫云→贵阳北', detail: '' },
+    { name: 'D7 早餐（贵阳老城）', lat: 26.619478, lng: 106.674554, type: 'food', time: '09:00', desc: '就近吃', detail: '推荐：肠旺面 / 花溪牛肉粉' },
     { name: '贵阳最后一顿饭（分手点）', lat: 26.619478, lng: 106.674554, type: 'food', time: '11:30', desc: '4 人午饭后分手', detail: '推荐：老凯里酸汤鱼 or 杨姐大排档丝娃娃', budget: '¥50/人' },
     { name: '胡同学·G2945 高铁贵阳北→虎门', lat: 26.619478, lng: 106.674554, type: 'transport', time: '15:09', desc: '⭐ 高铁 4h15，¥450（学生 65 折 ¥290）', detail: '15:09 出发 → 19:24 抵虎门' },
     { name: '2 成都党·贵阳龙洞堡机场', lat: 26.537812, lng: 106.805223, type: 'transport', time: '15:00', desc: 'CA2560 贵阳→成都 17:55（¥240）', detail: 'or 高铁' },
@@ -296,9 +295,9 @@ function overviewContent() {
   return `
 <div class="hero"><h1>贵州冒险 2026-07</h1><p class="subtitle">7 天 · 4 男胆大 · 自驾（遵义朋友 SUV）</p></div>
 <div class="info-grid">
-  <div class="info-card"><div class="label">住宿</div><div class="value">镇远 2 晚 · 双河洞 2 晚 · 紫云 2 晚（6 晚）</div></div>
-  <div class="info-card"><div class="label">大交通</div><div class="value">G2837 成都东→贵阳北 · G2945 胡同学→东莞</div></div>
-  <div class="info-card"><div class="label">自驾</div><div class="value">总里程 1400km · 车程 18.5h（高德实时）</div></div>
+  <div class="info-card"><div class="label">住宿</div><div class="value">镇远 2 · 双河洞 2 · 紫云 1 · 贵阳 1（6 晚）</div></div>
+  <div class="info-card"><div class="label">大交通</div><div class="value">G2837 成都→贵阳 · G2945 胡同学→东莞</div></div>
+  <div class="info-card"><div class="label">交通</div><div class="value">贵阳租 SUV 6 天 · 总里程 ~1300km</div></div>
   <div class="info-card"><div class="label">人均预算</div><div class="value">¥2,500 – 3,000（学生 65 折可 ¥2,300）</div></div>
 </div>
 <div class="section-head">行程概览</div>
