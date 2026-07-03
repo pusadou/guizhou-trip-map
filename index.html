@@ -259,8 +259,8 @@ const DAYS = [
     { name: '双河洞景区民宿（D3-D4 连住 2 晚）', lat: 28.233674, lng: 107.304816, type: 'hotel', time: '18:00', desc: '¥200-350/间 × 2', detail: '晚饭：景区内餐厅\\n星空/洞穴讲解', pay: { alipay: 1, wechat: 1 } }
   ]},
   { id: 4, label: 'D4', date: '7/8 周三', title: '双河洞深度🏔️', color: '#34c759', locations: [
-    { name: '悬崖咖啡（王一博打卡）', lat: 28.233674, lng: 107.304816, type: 'spot', time: '08:00', desc: '⭐⭐⭐ 双河洞王牌项目', detail: '横渡钢索+攀岩上 100m 悬崖平台+咖啡\\n约 4h 项目\\n手套自备防护', budget: '¥500-800' },
-    { name: '飞拉达（洞内 20-30m 攀岩）', lat: 28.233674, lng: 107.304816, type: 'spot', time: '13:30', desc: '⭐ 洞内攀岩', detail: '恐高党可自选参与 or 观赏\\n约 3h', budget: '¥300-500' },
+    { name: '悬崖咖啡（王一博打卡）', lat: 28.233674, lng: 107.304816, type: 'spot', time: '08:00', desc: '⭐⭐⭐ 双河洞王牌项目 · 4h', detail: '横渡钢索+攀岩上 100m 悬崖平台+咖啡\\n手套自备防护\\n含教练+全套装备+保险', budget: '¥500' },
+    { name: '双河洞自由活动', lat: 28.233674, lng: 107.304816, type: 'spot', time: '14:00', desc: '午后休整', detail: '走溶洞其他步道 or 民宿闲逛\\n（飞拉达 ¥400 砍：恐高党零压力 + 压预算）' },
     { name: '双河洞连住第 2 晚', lat: 28.233674, lng: 107.304816, type: 'hotel', time: '18:30', desc: '早睡（D5 6:30 起，最长车程日）' }
   ]},
   { id: 5, label: 'D5', date: '7/9 周四', title: '双河洞→安顺三连击→紫云', color: '#ff2d55', locations: [
@@ -297,8 +297,8 @@ function overviewContent() {
 <div class="info-grid">
   <div class="info-card"><div class="label">住宿</div><div class="value">镇远 2 · 双河洞 2 · 紫云 1 · 贵阳 1（6 晚）</div></div>
   <div class="info-card"><div class="label">大交通</div><div class="value">G2837 成都→贵阳 · G2945 胡同学→东莞</div></div>
-  <div class="info-card"><div class="label">交通</div><div class="value">贵阳租 SUV 6 天 · 总里程 ~1300km</div></div>
-  <div class="info-card"><div class="label">人均预算</div><div class="value">¥2,500 – 3,000（学生 65 折可 ¥2,300）</div></div>
+  <div class="info-card"><div class="label">交通</div><div class="value">贵阳租紧凑 SUV 6 天 · 总里程 ~1300km</div></div>
+  <div class="info-card"><div class="label">人均预算</div><div class="value">¥3,000 上下（压缩版：砍飞拉达+紧凑SUV+民宿）</div></div>
 </div>
 <div class="section-head">行程概览</div>
 <div class="day-list">${DAYS.slice(1).map(d=>`<div class="card" onclick="go(${d.id})"><div class="name"><span class="dot" style="background:${d.color}"></span>${d.label} · ${d.title}</div><div class="desc">${d.date}</div></div>`).join('')}</div>
